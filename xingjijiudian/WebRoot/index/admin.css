@@ -1,0 +1,171 @@
+.admin_login{
+height:300px;
+padding:50px 0 50px 350px;
+}
+a.pink {
+color: #D8325D;
+font-weight:bold;
+text-decoration:underline;
+}
+a.pink:hover {
+text-decoration:none;
+}
+
+.table_grid{
+width:100%;
+clear:both;
+padding:10px 0 10px 0;
+margin:auto;
+}
+table{width:100%;}
+th{background:#fff url(images/tr_back.gif) repeat-x center;color:#D8325D; height:21px; padding:10px;}
+td{text-align:left;padding:5px;}
+tr.even td{background: #EAEAEA;}
+tr.odd td{background: #FDFDFD;}
+
+
+#admin_header{
+width:970px;
+height:40px;
+margin:auto;
+padding-top:20px;
+}
+#admin_header_border{
+width:970px;
+height:12px;
+margin:auto;
+background:url(images/border_style.gif) repeat-x center;
+}
+/*---------------admin titles-----------------------*/
+.admin_index_title{
+float:left;
+width: auto;
+height: auto;
+background:url(images/adminicons/settings.png) no-repeat left;
+padding:5px 5px 5px 35px;
+font-size:14px;
+font-weight:bold;
+color:#445865;
+margin:10px;
+}
+.admin_addoffer_title{
+float:left;
+width: auto;
+height: auto;
+background:url(images/adminicons/addoffer.png) no-repeat left;
+padding:5px 5px 5px 35px;
+font-size:14px;
+font-weight:bold;
+color:#445865;
+margin:10px;
+}
+.admin_editoffer_title{
+float:left;
+width: auto;
+height: auto;
+background:url(images/adminicons/edit.png) no-repeat left;
+padding:5px 5px 5px 35px;
+font-size:14px;
+font-weight:bold;
+color:#445865;
+margin:10px;
+}
+.admin_details_title{
+float:left;
+width: auto;
+height: auto;
+background:url(images/adminicons/details.png) no-repeat left;
+padding:5px 5px 5px 35px;
+font-size:14px;
+font-weight:bold;
+color:#445865;
+margin:10px;
+}
+.adminform_row_contact{
+float:left;
+width:357px;
+text-align:center;
+padding:3px 0 3px 0;
+}
+label.adminleft{
+float:left;
+width:80px;
+padding-top:3px;
+text-align:right;
+}
+label.adminright{
+float:left;
+width:200px;
+padding-top:3px;
+padding-left:5px;
+text-align: left;
+color:#006699;
+}
+.add_tab{
+width: 950px;
+height: auto;
+float:left;
+background-color:#f3f5f6;
+padding:10px;
+margin: auto;
+}
+.details_tab{
+width:500px;
+height:auto;
+float:left;
+padding:0px 10px 10px 10px;
+border-left:1px #999999 solid;
+margin:10px;
+}
+/*----------------------------------------------*/
+
+.right_buttons{
+float:right;
+}
+.right_button{
+width:104px;
+height:26px;
+float:left;
+padding-left:10px;
+background:url(images/button_bg.gif) no-repeat center;
+text-align:center;
+line-height:26px;
+}
+.right_button a{
+font-size:10px;
+color:#D8325D;
+text-decoration:none;
+}
+.right_button a:hover{
+font-size:10px;
+color: #640064;
+text-decoration:none;
+}
+
+#admin_search_tab{
+width:290px;
+float:right;
+padding-top:5px;
+}
+label.search{
+float:left;
+padding-left:10px;
+color:#0066CC;
+}
+
+
+.admin_footer_help{
+width:908px;
+clear:both;
+float:left;
+height: auto;
+margin:10px auto 20px auto;
+background-color:#F2F2F2;
+border:1px #D1D1D1 solid;
+text-align:left;
+color: #666666;
+font-size:11px;
+background:url(images/adminicons/warning.png) no-repeat left;
+background-position:10px 50%;
+padding:10px 10px 10px 50px;
+}

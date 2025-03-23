@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="dao.GoodsMapper" >
+  <resultMap id="BaseResultMap" type="model.Goods" >
+    <id column="id" property="id" jdbcType="VARCHAR" />
+    <result column="price" property="price" jdbcType="VARCHAR" />
+    <result column="title" property="title" jdbcType="VARCHAR" />
+    <result column="content" property="content" jdbcType="VARCHAR" />
+    <result column="url" property="url" jdbcType="VARCHAR" />
+    <result column="type" property="type" jdbcType="VARCHAR" />
+     <result column="savetime" property="savetime" jdbcType="VARCHAR" />
+     <result column="huxing" property="huxing" jdbcType="VARCHAR" />
+     <result column="size" property="size" jdbcType="VARCHAR" />
+    
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, price,title,content,url,type,savetime,huxing,size
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from goods
+    where id = #{id,jdbcType=VARCHAR} 
+  </select>
+  <insert id="insert" parameterType="model.Goods" >
+    insert into goods (id, price,title,content,url,type,savetime,huxing,size
+      )
+    values (#{id,jdbcType=VARCHAR}, #{price,jdbcType=VARCHAR}, #{title,jdbcType=VARCHAR}, #{content,jdbcType=VARCHAR}, #{url,jdbcType=VARCHAR}, #{type,jdbcType=VARCHAR}, #{savetime,jdbcType=VARCHAR}, #{huxing,jdbcType=VARCHAR}, #{size,jdbcType=VARCHAR}
+      )
+  </insert>
+  <select id="getAll" parameterType="model.Goods"  resultMap="BaseResultMap" >
+  	SELECT * FROM goods where 1='1'  
+  	<if test="title != null" >
+        and title like #{title,jdbcType=VARCHAR}
+      </if>
+       order by savetime desc
+  </select>
+  
+  <select id="getAllGoodsForAdmin" parameterType="model.Goods" resultMap="BaseResultMap">
+  	SELECT * FROM goods where 1='1'   
+  	<if test="title != null" >
+        and title like #{title,jdbcType=VARCHAR}
+      </if>
+        order by savetime desc
+  </select>
+  <update id="updateByPrimaryKey" parameterType="model.Goods" >
+    update goods
+    set price = #{price,jdbcType=VARCHAR},
+      title = #{title,jdbcType=VARCHAR},
+      content = #{content,jdbcType=VARCHAR},
+      type = #{type,jdbcType=VARCHAR},
+       savetime = #{savetime,jdbcType=VARCHAR},
+        huxing = #{huxing,jdbcType=VARCHAR},
+       size = #{size,jdbcType=VARCHAR},
+      url = #{url,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=VARCHAR}
+  </update>
+</mapper>
